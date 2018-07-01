@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count!</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Home</a>
+    <h1>Count</h1>
+    <p>There are abunch of words in your input, which was:</p>
+    <h2>word count</h2>
+    <p>{{ fulltext }}: {{ count }}</p>
+    <h2>per word</h2>
+
+    {% for word, total in d %}
+        {{ word }}: {{ total }}<br/>
+    {% endfor %}
+
+</body>
+</html>
